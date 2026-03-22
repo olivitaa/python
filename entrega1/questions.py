@@ -17,9 +17,9 @@ print()
 while attempts > 0:
     # Mostrar progreso: letras adivinadas y guiones para las que faltan
     progress = ""
-    for letter in word:
-        if letter in guessed:
-            progress += letter + " "
+    for char in word:
+        if char in guessed:
+            progress += char + " "
         else:
             progress += "_ "
     print(progress)
@@ -30,6 +30,10 @@ while attempts > 0:
     print(f"Intentos restantes: {attempts}")
     print(f"Letras usadas: {', '.join(guessed)}")
     letter = input("Ingresá una letra: ")
+    if len(letter) != 1 or not letter.isalpha():
+        print ("Entrada no válida")
+        print 
+        coninue
     if letter in guessed:
         print("Ya usaste esa letra.")
     elif letter in word:
@@ -41,4 +45,4 @@ while attempts > 0:
         print("Esa letra no está en la palabra.")
     print()
 else:
-print(f"¡Perdiste! La palabra era: {word}")
+    print(f"¡Perdiste! La palabra era: {word}")
