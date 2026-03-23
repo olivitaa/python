@@ -7,23 +7,23 @@ jugar = "s"
 jugadas = 0
 puntaje=0
 #Mostrar categorias disponibles
-print ("categorias: ")
+print ("Categorias: ")
 for c in categorias:
     print (" ", c)
 #Pedir ingreso de categoria
-elegida = input ("elegir categoria: ")
+elegida = input ("Elegir categoria: ")
 while elegida not in categorias:
-    print ("categoria invalida")
-    elegida = input ("elegir categoria")
+    print ("Categoria invalida")
+    elegida = input ("Elegir categoria: ")
 listapalabras = random.sample(categorias[elegida],len(categorias[elegida]))
 while (jugar == "s" and jugadas < len(listapalabras)):
     word = listapalabras[jugadas]
     jugadas+=1
     guessed = []
     attempts = 6
-    print ("nueva ronda")
+    print ("---- NUEVA RONDA ----")
     print()
-    print ("puntaje actual: ",puntaje)
+    print ("Puntaje actual: ",puntaje)
     while attempts > 0:
         # Mostrar progreso: letras adivinadas y guiones para las que faltan
         progress = ""
@@ -36,20 +36,19 @@ while (jugar == "s" and jugadas < len(listapalabras)):
         # Verificar si el jugador ya adivinó la palabra completa
         if "_" not in progress:
             print("¡Ganaste!")
+            puntaje+=6
             break
         print(f"Intentos restantes: {attempts}")
         print(f"Letras usadas: {', '.join(guessed)}")
         letter = input("Ingresá una letra: ")
         if len(letter) != 1 or not letter.isalpha():
             print ("Entrada no válida")
-            print 
-            coninue
+            continue
         if letter in guessed:
             print("Ya usaste esa letra.")
         elif letter in word:
             guessed.append(letter)
             print("¡Bien! Esa letra está en la palabra.")
-            puntaje+=6
         else:
             guessed.append(letter)
             attempts -= 1
