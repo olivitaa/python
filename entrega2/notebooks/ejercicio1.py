@@ -29,6 +29,13 @@ for line in lineas:
     cantpalabras += len(palabras)
 print (f"cantidad de palabras: {cantpalabras}")
 
-print(f"promedio de palabras por linea: {(round(cantpalabras/cantlineas,2))}")
-    
+promedio = (round(cantpalabras/cantlineas,2))
+print(f"promedio de palabras por linea: {promedio}")
+
+print (f"lineas por encima del promedio {promedio} : ")
+for line in lineas:
+    palabras = line.split()
+    cantpalabras = len(palabras)
+    if (cantpalabras>promedio):
+        print (f" \" {line} \" ({cantpalabras} palabras)")
     
