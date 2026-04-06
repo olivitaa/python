@@ -1,10 +1,12 @@
 SEMINARIO DE LENGUAJES - PYTHON
-Entrega 2
+Entrega 2: contiene las funciones implementadas en el notebook definidas en el directorio src
 
-Consigna: explicación de como instalar dependencias y ejecutar el programa
-Las funciones se implementan en el directorio src, y se ejecutan desde el directorio notebooks
+Requisitos para la ejecución: 
+-Tener instalado Python 3.x y jupyter notebook o jupyter lab
+-Crear un entorno virtual utilizando --> python -m venv .venv
+-Activar este entorno utilizando --> \.venv\Scripts\Activate
+-Paquete necesario: pip install -r requirements.txt 
 
-Para poder ejecutarlos, se requieren Python 3.x y jupyter notebook o jupyter lab
 
 Instalación de dependencias:
 clone el repositorio con --> git clone https://github.com/olivitaa/python
