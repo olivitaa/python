@@ -11,7 +11,7 @@ clone el repositorio con --> git clone https://github.com/olivitaa/python
 y entre a la entrega2 con --> cd entrega2
 luego pegue --> pip install jupyter
 
-Ejecucián del programa:
+Ejecución del programa:
 primero debe iniciar jupyter pegando en la terminal --> jupyter notebook
 donde será redireccionado, y (para ejecutar el ejercicio 10 por ejemplo) deberá abrir el notebook "prueba_competencia.ipynb"
 luego ejecute todas las celdas con el boton de "run all cells"
